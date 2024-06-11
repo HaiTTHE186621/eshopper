@@ -39,7 +39,7 @@
                 <hr>
                 
                 
-                <!-- <p>Don't have an account!</p>  -->
+               
                 <button class="btn btn-primary btn-block" type="button" id="btn-signup"><i class="fas fa-user-plus"></i> Sign up New Account</button>
             </form>
 

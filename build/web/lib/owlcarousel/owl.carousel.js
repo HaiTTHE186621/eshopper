@@ -329,9 +329,17 @@
 				// TODO: Should be computed from number of min width items in stage
 				view = Math.max(settings.items * 2, 4),
 				size = Math.ceil(items.length / 2) * 2,
-				repeat = settings.loop && items.length ? settings.rewind ? view : Math.max(view, size) : 0,
+				repeat = 0,
 				append = '',
 				prepend = '';
+				if (settings.loop && items.length) {
+    					if (settings.rewind) {
+        					repeat = view;
+    					} else {
+        					repeat = Math.max(view, size);
+    					}
+				}
+				
 
 			repeat /= 2;
 

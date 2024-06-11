@@ -4,7 +4,6 @@
  */
 package DBContext;
 
-
 import DAO.DAO;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -13,6 +12,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class DBContext {
+
+    // Create a logger instance for DBContext
+    private static final Logger logger = Logger.getLogger(DBContext.class.getName());
 
     public Connection getConnection() {
         Connection connection = null;
@@ -23,7 +25,7 @@ public class DBContext {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             connection = DriverManager.getConnection(url, user, pass);
         } catch (ClassNotFoundException | SQLException ex) {
-            Logger.getLogger(DBContext.class.getName()).log(Level.SEVERE, null, ex);
+            logger.log(Level.SEVERE, "Failed to establish connection", ex);
         }
         return connection;
     }
@@ -32,10 +34,9 @@ public class DBContext {
         DBContext dbContext = new DBContext();
         Connection connection = dbContext.getConnection();
         if (connection != null) {
-            System.out.println("Connection established successfully!");
+            logger.log(Level.INFO, "Connection established successfully!");
         } else {
-            System.out.println("Failed to establish connection.");
+            logger.log(Level.WARNING, "Failed to establish connection.");
         }
     }
 }
-

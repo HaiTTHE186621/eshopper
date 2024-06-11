@@ -148,7 +148,7 @@
                     <form>
                         <div class="modal-header">						
                             <h4 class="modal-title">Delete Product</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
                         </div>
                         <div class="modal-body">					
                             <p>Are you sure you want to delete these Records?</p>

@@ -1682,9 +1682,9 @@
 				});
 			}
 
-			if (typeof option == 'string' && option.charAt(0) !== '_') {
-				data[option].apply(data, args);
-			}
+			if (typeof option === 'string' && !option.startsWith('_')) {
+    				data[option].apply(data, args);
+}
 		});
 	};
 

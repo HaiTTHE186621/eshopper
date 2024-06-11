@@ -86,9 +86,9 @@
 
     // Product Quantity
     $('.quantity button').on('click', function () {
-        var button = $(this);
-        var oldValue = button.parent().parent().find('input').val();
-        var newVal;
+        const button = $(this);
+        const oldValue = button.parent().parent().find('input').val();
+        let newVal;
         if (button.hasClass('btn-plus')) {
             newVal = parseFloat(oldValue) + 1;
         } else {

@@ -165,7 +165,7 @@ table.table .avatar {
     top: 3px;
     width: 6px;
     height: 11px;
-    border: solid #000;
+    border: solid #fff;
     border-width: 0 3px 3px 0;
     transform: inherit;
     z-index: 3;
@@ -174,9 +174,6 @@ table.table .avatar {
 .custom-checkbox input[type="checkbox"]:checked + label:before {
     border-color: #03A9F4;
     background: #03A9F4;
-}
-.custom-checkbox input[type="checkbox"]:checked + label:after {
-    border-color: #fff;
 }
 .custom-checkbox input[type="checkbox"]:disabled + label:before {
     color: #b8b8b8;

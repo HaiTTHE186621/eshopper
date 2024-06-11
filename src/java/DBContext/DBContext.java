@@ -12,17 +12,13 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author Admin
- */
 public class DBContext {
-    Connection connection;
 
     public Connection getConnection() {
+        Connection connection = null;
         try {
-            String user = "sa";
-            String pass = "123";
+            String user = System.getenv("sa");
+            String pass = System.getenv("123");
             String url = "jdbc:sqlserver://localhost:1433;databaseName=EShopper";
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             connection = DriverManager.getConnection(url, user, pass);
@@ -31,13 +27,15 @@ public class DBContext {
         }
         return connection;
     }
-    
-    public static void main(String[] args){
-        DAO dao = new DAO();
-        System.out.println(dao.getAllCategory());
-        System.out.println(dao.getProductByFID("1"));
-        System.out.println(dao.getAllAccount());
-        System.out.println(dao.getProductListByName("ring"));
-        System.out.println(dao.getAllCartProduct("1"));
+
+    public static void main(String[] args) {
+        DBContext dbContext = new DBContext();
+        Connection connection = dbContext.getConnection();
+        if (connection != null) {
+            System.out.println("Connection established successfully!");
+        } else {
+            System.out.println("Failed to establish connection.");
+        }
     }
 }
+

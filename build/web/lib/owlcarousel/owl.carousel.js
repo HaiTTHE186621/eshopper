@@ -272,8 +272,8 @@
 	}, {
 		filter: [ 'width', 'items', 'settings' ],
 		run: function(cache) {
-			cache.current = this._items && this._items[this.relative(this._current)];
-		}
+    			cache.current = this._items?.[this.relative(this._current)];
+}
 	}, {
 		filter: [ 'items', 'settings' ],
 		run: function() {

@@ -58,7 +58,7 @@
                                 <td>${o.pid}</td>
                                 <td>${o.pname}</td>
                                 <td>
-                                    <img class="img-td" src="${o.pimage}">
+                                    <img class="img-td" src="${o.pimage}" alt="Description of the image">
                                 </td>
                                 <td>$${o.pprice}</td>
                                 <td>${o.cid} </td>

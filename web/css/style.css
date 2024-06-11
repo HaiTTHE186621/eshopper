@@ -9350,7 +9350,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .text-hide {
-  font: 0/0 a;
+  font-size: 0;
   color: transparent;
   text-shadow: none;
   background-color: transparent;

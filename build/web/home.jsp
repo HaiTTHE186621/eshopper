@@ -111,7 +111,7 @@
                         <div class="navbar-nav w-100 overflow-hidden" style="height: 410px">
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link" data-toggle="dropdown">Dresses <i class="fa fa-angle-down float-right mt-1"></i></a>
-                                <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
+                                <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0" aria-labelledby="navbarDropdown">
                                     <a href="for?fid=1" class="dropdown-item">Men's Dresses</a>
                                     <a href="for?fid=2" class="dropdown-item">Women's Dresses</a>
                                     <a href="for?fid=3" class="dropdown-item">Baby's Dresses</a>
@@ -128,7 +128,6 @@
                             <a href="category?cid=9" class="nav-item nav-link">Shoes</a>
                         </div>
                     </nav>
-
                 </div>
                 <div class="col-lg-9">
                     <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
@@ -168,7 +167,6 @@
                                     <a href="logout" class="nav-item nav-link">Logout</a>
                                 </div>
                             </c:if>
-
                         </div>
                     </nav>
                     <div id="header-carousel" class="carousel slide" data-ride="carousel">
@@ -209,6 +207,12 @@
             </div>
         </div>
         <!-- Navbar End -->
+
+        <!-- Additional Code for ARIA Accessibility -->
+        <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0" aria-labelledby="navbarDropdown">
+            <!-- Dropdown content -->
+        </div>
+
 
 
         <!-- Featured Start -->
